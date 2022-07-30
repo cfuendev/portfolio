@@ -1,0 +1,48 @@
+---
+layout: pme.njk
+style: article.css
+---
+
+<div id="Pic">
+  <img src="{{pic}}"></img>
+</div>
+
+<!--TODO: Make first and second breadcrumb redirect to ther respective route-->
+<div id="Breadcrumbs">
+  <span>{{tags[0]}}</span>
+  <span>/</span>
+  <span>{{tags[1]}}</span>
+  <span>/</span>
+  <span>{{title}}</span>
+</div>
+
+<div id="Body">
+  <section id="ProjectIndex">
+  {% for article in collections[tags[1]] %}
+    <li>
+      <ul>{{article.data.title}}</ul>
+    </li>
+  {% endfor %}
+  </section>
+
+  <article id="Article">
+    <section id="Titles">
+      <h1>{{title}}</h1>
+      <h2>{{desc}}</h2>
+    </section>
+
+
+    <!--TODO: make the Tags link to their respective search filter-->
+    <section id="Tags">
+      {% for tag in tags.slice(2) %}
+        <div class="Tag">{{tag}}</div>
+      {% endfor %}
+    </section>
+
+    <hr>
+
+    <section id="Content">
+      {{content|safe}}
+    </section>
+  </article>
+</div>

@@ -1,0 +1,79 @@
+#Breadcrumbs {
+
+}
+
+#Pic {
+  max-height: 12rem;
+  overflow: hidden;
+}
+
+#Pic img {
+  width: 100%;
+}
+
+#Body {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 0.3rem 0 0.3rem;
+}
+
+#ProjectIndex > li > ul {
+  margin: 0;
+  padding: 0;
+}
+
+#Article > #Tags {
+  display: flex;
+  flex-direction: row;
+}
+
+#Article > #Tags > div {
+  font-size: 0.8rem;
+  border: 1px solid black;
+  padding: 0.3rem;
+  border-radius: 4rem;
+  margin-right: 0.3rem;
+}
+
+#Article > #Titles > h1 {
+  margin: 0 0 0.3rem 0;
+  font-size: 2rem;
+}
+
+#Article > #Titles > h2 {
+  margin: 0.6rem 0 0.6rem 0;
+  font-size: 1rem;
+}
+
+#Article > #Content {
+  margin-top: 1.5rem;
+}
+
+/* TODO: Make layout of both #Nav and #ProjectIndex similar to Tailwindcss Docs (Hamburger Menus at the sides) */
+@media (max-width:640px) {
+
+  header#Nav {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    border-bottom: 1px solid black;
+    padding: 0.5rem;
+  }
+
+  header#Nav > #Links {
+    width: 100%;
+    /*background-color: red;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: center;
+    padding: 0 6rem 0 2rem;
+  }
+
+  header#Nav > #Links > a {
+    display: flex;
+    align-items: center;
+    margin-right: 3%;
+  }
+
+}
