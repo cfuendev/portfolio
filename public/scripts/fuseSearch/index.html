@@ -1,0 +1,79 @@
+import Fuse from 'fuse.js';
+
+const search = (data, keys, text) => {
+  const fuse = new Fuse(data, {
+    keys: keys
+  })
+  return fuse.search(text)
+}
+
+articles = [
+  
+  
+  {
+  title: "Starting from scratch (Portfolio Devlog #1)",
+  language: javascript
+  tags: [
+    
+    blog,
+    
+    portfolio,
+    
+    ssg,
+    
+    static-site-generation,
+    
+  ]
+  }
+  
+  
+  
+  {
+  title: "Don&#39;t connect your Stackblitz project with GitHub",
+  language: javascript
+  tags: [
+    
+    blog,
+    
+    portfolio,
+    
+    stackblitz,
+    
+    cloud-development,
+    
+    github,
+    
+  ]
+  }
+  
+  
+  
+  
+  
+  {
+  title: "GitHub-inspired explore page (Portfolio Devlog #2)",
+  language: javascript
+  tags: [
+    
+    blog,
+    
+    portfolio,
+    
+    fuse.js,
+    
+    ssg,
+    
+    static-site-generation,
+    
+  ]
+  }
+  
+  
+  
+  
+  
+  
+
+]
+
+export default search;

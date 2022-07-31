@@ -46,51 +46,84 @@
   <section id="SearchResults">
   
   
-    <div class="Result">
-      <div style="background-image: url(https://scontent.fbog4-1.fna.fbcdn.net/v/t1.6435-9/47681981_616991432090087_4321571749360566272_n.jpg?stp=dst-jpg_p320x320&amp;_nc_cat=111&amp;ccb=1-7&amp;_nc_sid=e3f864&amp;_nc_ohc=4iwv6txxCoUAX8rJx59&amp;_nc_ht=scontent.fbog4-1.fna&amp;oh=00_AT9ce43zosL-3H5GycCD0G0BBRZBHawfxyHnzP2s269YoA&amp;oe=6306DE96)" class="Pic">
+    <div data-article-id="portfolio-1" class="Result">
+      <div style="background-image: url(https://images.pexels.com/photos/3053804/pexels-photo-3053804.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1)" class="Pic">
       </div>
       <div class="Details">
-        <h4>
-          An 11ty portfolio from scratch
-        </h4>
-        <span>
-          The tale of how I created a portfolio website/blog with 11ty
-        </span>
+        <div>
+          <h4>
+            Starting from scratch (Portfolio Devlog #1)
+          </h4>
+          <span>
+            The tale of how I created a portfolio website/blog with 11ty
+          </span>
+        </div>
         <div class="Tags">
-            <div class="javascript">javascript</div>
+          <div class="javascript">javascript</div>
           
             <div>ssg</div>
           
             <div>static-site-generation</div>
           
+          </div>
         </div>
       </div>
-    </div>
   
   
   
-    <div class="Result">
-      <div style="background-image: url(https://scontent.fbog4-1.fna.fbcdn.net/v/t1.6435-9/47681981_616991432090087_4321571749360566272_n.jpg?stp=dst-jpg_p320x320&amp;_nc_cat=111&amp;ccb=1-7&amp;_nc_sid=e3f864&amp;_nc_ohc=4iwv6txxCoUAX8rJx59&amp;_nc_ht=scontent.fbog4-1.fna&amp;oh=00_AT9ce43zosL-3H5GycCD0G0BBRZBHawfxyHnzP2s269YoA&amp;oe=6306DE96)" class="Pic">
+    <div data-article-id="portfolio-2" class="Result">
+      <div style="background-image: url(https://images.pexels.com/photos/3755755/pexels-photo-3755755.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1)" class="Pic">
       </div>
       <div class="Details">
-        <h4>
-          Don&#39;t connect your Stackblitz project with GitHub
-        </h4>
-        <span>
-          A word of advice for people who don&#39;t want to lose their progress
-        </span>
+        <div>
+          <h4>
+            Don&#39;t connect your Stackblitz project with GitHub
+          </h4>
+          <span>
+            A word of advice for people who don&#39;t want to lose their progress
+          </span>
+        </div>
         <div class="Tags">
-            <div class="javascript">javascript</div>
+          <div class="javascript">javascript</div>
+          
+            <div>stackblitz</div>
+          
+            <div>cloud-development</div>
+          
+            <div>github</div>
+          
+          </div>
+        </div>
+      </div>
+  
+  
+  
+  
+  
+    <div data-article-id="portfolio-3" class="Result">
+      <div style="background-image: url(https://images.pexels.com/photos/8005368/pexels-photo-8005368.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1)" class="Pic">
+      </div>
+      <div class="Details">
+        <div>
+          <h4>
+            GitHub-inspired explore page (Portfolio Devlog #2)
+          </h4>
+          <span>
+            How to set up a minimal fuzzy search in a static site
+          </span>
+        </div>
+        <div class="Tags">
+          <div class="javascript">javascript</div>
+          
+            <div>fuse.js</div>
           
             <div>ssg</div>
           
             <div>static-site-generation</div>
           
+          </div>
         </div>
       </div>
-    </div>
-  
-  
   
   
   
@@ -98,6 +131,134 @@
   </section>
 
 </div>
+
+<script type="module">
+import Fuse from 'https://cdn.skypack.dev/fuse.js';
+
+const search = (data, keys, text) => {
+  const fuse = new Fuse(data, {
+    keys: keys
+  })
+  return fuse.search(text)
+}
+
+let articles = [
+  {
+  title: "Starting from scratch (Portfolio Devlog #1)",
+  language: "javascript",
+  tags: [
+    "blog",
+    "portfolio",
+    "ssg",
+    "static-site-generation",
+    ],
+  html: `
+      <div style="background-image: url(https://images.pexels.com/photos/3053804/pexels-photo-3053804.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1)" class="Pic">
+      </div>
+      <div class="Details">
+        <div>
+          <h4>
+            Starting from scratch (Portfolio Devlog #1)
+          </h4>
+          <span>
+            The tale of how I created a portfolio website/blog with 11ty
+          </span>
+        </div>
+        <div class="Tags">
+          <div class="javascript">javascript</div>
+          
+            <div>ssg</div>
+          
+            <div>static-site-generation</div>
+          
+          </div>
+        </div>`
+  },{
+  title: "Don't connect your Stackblitz project with GitHub",
+  language: "javascript",
+  tags: [
+    "blog",
+    "portfolio",
+    "stackblitz",
+    "cloud-development",
+    "github",
+    ],
+  html: `
+      <div style="background-image: url(https://images.pexels.com/photos/3755755/pexels-photo-3755755.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1)" class="Pic">
+      </div>
+      <div class="Details">
+        <div>
+          <h4>
+            Don&#39;t connect your Stackblitz project with GitHub
+          </h4>
+          <span>
+            A word of advice for people who don&#39;t want to lose their progress
+          </span>
+        </div>
+        <div class="Tags">
+          <div class="javascript">javascript</div>
+          
+            <div>stackblitz</div>
+          
+            <div>cloud-development</div>
+          
+            <div>github</div>
+          
+          </div>
+        </div>`
+  },{
+  title: "GitHub-inspired explore page (Portfolio Devlog #2)",
+  language: "javascript",
+  tags: [
+    "blog",
+    "portfolio",
+    "fuse.js",
+    "ssg",
+    "static-site-generation",
+    ],
+  html: `
+      <div style="background-image: url(https://images.pexels.com/photos/8005368/pexels-photo-8005368.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1)" class="Pic">
+      </div>
+      <div class="Details">
+        <div>
+          <h4>
+            GitHub-inspired explore page (Portfolio Devlog #2)
+          </h4>
+          <span>
+            How to set up a minimal fuzzy search in a static site
+          </span>
+        </div>
+        <div class="Tags">
+          <div class="javascript">javascript</div>
+          
+            <div>fuse.js</div>
+          
+            <div>ssg</div>
+          
+            <div>static-site-generation</div>
+          
+          </div>
+        </div>`
+  },
+]
+
+document.querySelector('#SearchBar input').addEventListener('input', (e) => {
+
+    document.getElementById('SearchResults').innerHTML = ''
+  
+    search(articles, ['title', 'language', 'tags'], e.target.value).map(
+      (result) => { return result.item.html }
+    ).forEach((resultHTML) => {
+      let resultElm = document.createElement('div')
+      resultElm.innerHTML = resultHTML;
+      resultElm.className = 'Result';
+      document.getElementById('SearchResults').appendChild(resultElm)
+    })
+  
+})
+
+console.log(articles)
+</script>
 
 </body>
 </html>
