@@ -9,17 +9,14 @@
 
 #SearchBar input {
 	outline: none;
-	border: 1px solid black;
 	border-radius: 4rem;
 	padding: .5rem 1.7rem .5rem 1.7rem;
 	width: 50%;
 	font-size: 1.5rem;
 }
 
-/* TODO: Make responsive */
 #SearchResults {
 	padding: .6rem .6rem .6rem .6rem;
-	border-top: 1px solid black;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(329.5px, 1fr));
 	grid-column-gap: .6rem;
@@ -27,8 +24,8 @@
 }
 
 .Result {
-	border: 1px solid black;
 	border-radius: .4rem;
+	background-color: var(--base2);
 }
 
 .Result h4 {
@@ -51,7 +48,9 @@
 	padding-bottom: .5rem;
 }
 
-.Result .Tags {
+.Result .Tags,
+.Project .Tags {
+  color: black;
   display: flex;
   flex-direction: row;
 	flex-wrap: wrap;
@@ -62,16 +61,69 @@
 	align-items: end;
 }
 
-.Result .Tags div {
+.Result .Tags a,
+.Project .Tags a {
   font-size: 0.6rem;
-  border: 1px solid black;
+  border: 1px solid var(--base3);
   padding: 0.3rem;
   border-radius: 4rem;
   margin-right: 0.3rem;
+  text-decoration-line: none;
+	color: white;
 }
 
-.Tags div.javascript {
+.Tags a.javascript {
 	background-color: #f8db40;
 	border-color: #7a6c21 !important;
 	color: #2e2e2c;
+}
+
+#Projects {
+	padding: .6rem .6rem .6rem .6rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(659px, 1fr));
+	grid-column-gap: .6rem;
+	grid-row-gap: .6rem;
+}
+
+.Project {
+	border-radius: .4rem;
+}
+
+.Project h4 {
+	margin: 0 0 0 0;
+}
+
+.Project .Pic {
+	overflow: hidden;
+	background-position: center;
+	background-size: cover;
+	height: 12rem;
+	border-radius: .4rem .4rem 0 0;
+}
+
+.Project .Details {
+	padding: .5rem;
+}
+
+.Project .Details h4 {
+	padding-bottom: .5rem;
+}
+
+.Project .Tags {
+  display: flex;
+  flex-direction: row;
+	flex-wrap: wrap;
+	grid-row-gap: .5rem;
+	padding-top: .5rem;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	align-items: end;
+}
+
+.Project .Tags div {
+  font-size: 0.6rem;
+  padding: 0.3rem;
+  border-radius: 4rem;
+  margin-right: 0.3rem;
 }

@@ -1,0 +1,114 @@
+---
+layout: pme.njk
+style: search.css
+---
+
+<div id="Body">
+  <section id="SearchBar">
+    <input />
+  </section>
+
+  <section id="SearchOption">
+  </section>
+
+  <section id="Projects">
+  {% for project in [
+  {
+    title: 'portfolio',
+    desc: 'My portfolio',
+    pic: 'https://www.rd.com/wp-content/uploads/2021/04/GettyImages-139677758-scaled.jpg',
+    stars: 3
+  }
+  ,
+  {
+    title: 'interactive-cv',
+    desc: 'An eyecatcher for hiring managers and a tool to update my CVs',
+    pic: 'https://images.pexels.com/photos/3778966/pexels-photo-3778966.jpeg',
+    stars: 7
+  },
+  {
+    title: 'base16-studio',
+    desc: 'A base16-studio for the base16-gallery',
+    pic: 'https://images.pexels.com/photos/3551723/pexels-photo-3551723.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    stars: 7
+  }
+  ] %}
+
+    <div class="Project">
+      {% set collection = collections[project.title] %}
+      <div style="background-image: url({{project.pic}})"
+      class="Pic">
+      </div>
+      <div class="Details">
+        <h4>{{ project.title }}</h4>
+        <span>{{ project.desc }}<span>
+        <div class="Tags">
+          {% for tag in collection[0].data.inheritedTags %}
+            <a href="/blog/{{tag}}">{{ tag }}</a>
+          {% endfor %}
+        </div>
+        <div>
+          {{ collection.length | ifzero }} articles
+        </div>
+        <div>
+          {{ collection[0].data.language }}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  </section>
+</div>
+
+<script type="module">
+  import Fuse from 'https://cdn.skypack.dev/fuse.js';
+
+  const search = (data, keys, text) => {
+    const fuse = new Fuse(data, {
+      keys: keys
+    })
+    return fuse.search(text)
+  }
+
+  let articles = [
+    {% for article in collections.all %}{% if article.data.title %}{{ "{" }}
+    title: "{{ article.data.title | safe }}",
+    language: "{{ article.data.language }}",
+    tags: [
+      {% for tag in article.data.tags %}"{{ tag }}",
+      {% endfor %}],
+    html: `
+        <div style="background-image: url({{article.data.pic}})" class="Pic">
+        </div>
+        <div class="Details">
+          <div>
+            <h4>
+              {{article.data.title}}
+            </h4>
+            <span>
+              {{article.data.desc}}
+            </span>
+          </div>
+          <div class="Tags">
+            <div class="{{article.data.language}}">{{article.data.language}}</div>
+            {% for tag in article.data.tags.slice(2) %}
+              <div>{{tag}}</div>
+            {% endfor %}
+            </div>
+          </div>`
+    {{ "}," }}{% endif %}{% endfor %}
+  ]
+
+  document.querySelector('#SearchBar input').addEventListener('input', (e) => {
+
+    document.getElementById('SearchResults').innerHTML = ''
+
+    search(articles, ['title', 'language', 'tags'], e.target.value).map(
+      (result) => { return result.item.html }
+    ).forEach((resultHTML) => {
+      let resultElm = document.createElement('div')
+      resultElm.innerHTML = resultHTML;
+      resultElm.className = 'Result';
+      document.getElementById('SearchResults').appendChild(resultElm)
+    })
+  })
+</script>

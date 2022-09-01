@@ -1,0 +1,89 @@
+/*
+ * https://weblium.com/blog/wp-content/uploads/2019/01/image10-1-1000x504.png
+ * https://weblium.com/blog/wp-content/uploads/2019/01/image8-1-1000x516.png
+ * https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+ * */
+
+section#Hero {
+	font-family: 'Nunito', sans-serif;
+	padding: 30px 0 30px 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+section#Hero img {
+	width: 200px;
+	border-radius: 25%;
+}
+
+section#Hero > div {
+	padding-left: 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+section#Hero > div > h1.Logo {
+	text-indent: -5px;
+	line-height: 40px;
+	padding: 0;
+	margin: 0;
+	font-size: 50px;
+}
+
+section#Hero > div > h2 {
+	padding: 0;
+	margin: 0;
+	font-size: 20px;
+}
+
+section#Hero > div > span {
+	line-height: 20px;
+	border-radius: 25px;
+}
+
+section#Body {
+	font-family: 'Nunito', sans-serif;
+	background-color: var(--base2);
+}
+
+section#Body > #Tech {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+	grid-column-gap: 2rem;
+	grid-row-gap: .6rem;
+	padding: 30px 20% 30px 20%;
+}
+
+section#Body > #Tech > .Tech {
+	display: inline-block;
+	text-decoration-line: none;
+	color: white;
+}
+
+section#Body > #Tech > .Tech:hover {
+	opacity: 70%;
+}
+
+section#Body > #Tech > .Tech > div > span {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+section#Body > #Tech > .Tech > div > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--base3);
+	padding: 20px;
+	border-radius: 25px;
+	min-height: 105px;
+}
+
+section#Body > #Tech > .Tech > div > div > img {
+	max-width: 100px;
+	max-height: 90px;
+}

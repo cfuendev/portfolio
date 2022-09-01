@@ -1,28 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+
+.vitae {
+  --base0: #29262d;
+  --base1: #2f2d35;
+  --base2: #373741;
+  --base3: #4e4d5b;
+}
+
+body {
+  background-color: var(--base0);
+  color: white;
+}
+
 header#Nav {
+  margin-top: 10px;
+  top: 0;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  padding: 0 10px 0 10px;
+}
+
+header#Nav > div {
+  width: 100%;
+  font-family: 'Nunito', sans-serif;
   display: flex;
   flex-direction: row;
   align-content: center;
-  border-bottom: 1px solid black;
   padding: 0.5rem 2rem 0.5rem 2rem;
+  background-color: #373741;
+  border-radius: 3px;
+  filter: drop-shadow(0 3px 2px rgb(0,0,0,0.1));
 }
 
-header#Nav > #Logo {
+header#Nav > div > #Logo {
   font-size: 1.5rem;
 }
 
-header#Nav > #Links {
-  width: 100%;
+header#Nav > div > #Links {
+  min-width: 500px;
   /*background-color: red;*/
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-content: center;
+	color: white;
 }
 
-header#Nav #Links a {
+header#Nav > div > #Links a {
   display: flex;
   align-items: center;
   margin-right: 5%;
+  text-decoration-line: none;
+  color: inherit;
 }
 
 

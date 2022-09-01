@@ -4,6 +4,9 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('log', (value) => {
     console.log(value);
   });
+  eleventyConfig.addFilter('ifzero', (value) => {
+    return (value) ? value : 0;
+  });
 
   return {
     dir: {
@@ -12,4 +15,3 @@ module.exports = (eleventyConfig) => {
     },
   };
 };
-

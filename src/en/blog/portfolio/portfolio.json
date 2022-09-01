@@ -1,4 +1,7 @@
 {
-  "tags": "portfolio",
-  "language": "javascript"
+  "tags": ["portfolio", "11ty", "eleventy", "ssg", "static-site-generation"],
+  "inheritedTags": ["portfolio", "11ty", "eleventy", "ssg", "static-site-generation"],
+  "language": "javascript",
+  "repo": "cfuendesign/cfuen.dev",
+  "demo": "not yet"
 }

@@ -1,0 +1,110 @@
+---
+layout: pme.njk
+style: search.css
+---
+
+<div id="Body">
+  <section id="SearchBar">
+    <input />
+  </section>
+
+  <section id="SearchOption">
+    <!--
+  {% for article in collections[tags[1]] %}
+    <li>
+      <ul>{{article.data.title}}</ul>
+    </li>
+  {% endfor %}
+	-->
+  </section>
+
+  <section id="SearchResults">
+  {% for article in collections.all %}
+  {% if article.data.title %}
+    <div
+    data-article-id="{{article.data.tags[1]}}-{{article.fileSlug}}"
+    class="Result">
+      <div
+      style="background-image: url({{article.data.pic}})"
+      class="Pic">
+      </div>
+      <div class="Details">
+        <div>
+          <h4>
+            {{article.data.title}}
+          </h4>
+          <span>
+            {{article.data.desc}}
+          </span>
+        </div>
+        <div class="Tags">
+          <a class="{{article.data.language}}">
+            {{article.data.language}}
+          </a>
+          {% for tag in article.data.tags.slice(2) %}
+          <a>
+            {{tag}}
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% endfor %}
+  </section>
+
+</div>
+
+<script type="module">
+  import Fuse from 'https://cdn.skypack.dev/fuse.js';
+
+  const search = (data, keys, text) => {
+    const fuse = new Fuse(data, {
+      keys: keys
+    })
+    return fuse.search(text)
+  }
+
+  let articles = [
+    {% for article in collections.all %}{% if article.data.title %}{{ "{" }}
+    title: "{{ article.data.title | safe }}",
+    language: "{{ article.data.language }}",
+    tags: [
+      {% for tag in article.data.tags %}"{{ tag }}",
+      {% endfor %}],
+    html: `
+        <div style="background-image: url({{article.data.pic}})" class="Pic">
+        </div>
+        <div class="Details">
+          <div>
+            <h4>
+              {{article.data.title}}
+            </h4>
+            <span>
+              {{article.data.desc}}
+            </span>
+          </div>
+          <div class="Tags">
+            <div class="{{article.data.language}}">{{article.data.language}}</div>
+            {% for tag in article.data.tags.slice(2) %}
+              <div>{{tag}}</div>
+            {% endfor %}
+            </div>
+          </div>`
+    {{ "}," }}{% endif %}{% endfor %}
+  ]
+
+  document.querySelector('#SearchBar input').addEventListener('input', (e) => {
+
+    document.getElementById('SearchResults').innerHTML = ''
+
+    search(articles, ['title', 'language', 'tags'], e.target.value).map(
+      (result) => { return result.item.html }
+    ).forEach((resultHTML) => {
+      let resultElm = document.createElement('div')
+      resultElm.innerHTML = resultHTML;
+      resultElm.className = 'Result';
+      document.getElementById('SearchResults').appendChild(resultElm)
+    })
+  })
+</script>
