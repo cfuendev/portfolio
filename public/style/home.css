@@ -46,6 +46,12 @@ section#Hero > div > span {
 section#Body {
 	font-family: 'Nunito', sans-serif;
 	background-color: var(--base2);
+	text-align: center;
+}
+
+section#Body h3 {
+	padding-top: 30px;
+	font-size: 30px;
 }
 
 section#Body > #Tech {
@@ -53,7 +59,7 @@ section#Body > #Tech {
 	grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
 	grid-column-gap: 2rem;
 	grid-row-gap: .6rem;
-	padding: 30px 20% 30px 20%;
+	padding: 0 20% 30px 20%;
 }
 
 section#Body > #Tech > .Tech {
@@ -67,10 +73,12 @@ section#Body > #Tech > .Tech:hover {
 }
 
 section#Body > #Tech > .Tech > div > span {
+	font-size: 20px;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	padding-top: 10px;
 }
 
 section#Body > #Tech > .Tech > div > div {

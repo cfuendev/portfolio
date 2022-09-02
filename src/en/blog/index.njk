@@ -38,8 +38,8 @@ style: search.css
           </span>
         </div>
         <div class="Tags">
-          <a class="{{article.data.language}}">
-            {{article.data.language}}
+          <a class="{{article.data.tech}}">
+            {{article.data.tech}}
           </a>
           {% for tag in article.data.tags.slice(2) %}
           <a>
@@ -68,7 +68,7 @@ style: search.css
   let articles = [
     {% for article in collections.all %}{% if article.data.title %}{{ "{" }}
     title: "{{ article.data.title | safe }}",
-    language: "{{ article.data.language }}",
+    tech: "{{ article.data.tech }}",
     tags: [
       {% for tag in article.data.tags %}"{{ tag }}",
       {% endfor %}],
@@ -85,7 +85,7 @@ style: search.css
             </span>
           </div>
           <div class="Tags">
-            <div class="{{article.data.language}}">{{article.data.language}}</div>
+            <div class="{{article.data.tech}}">{{article.data.tech}}</div>
             {% for tag in article.data.tags.slice(2) %}
               <div>{{tag}}</div>
             {% endfor %}
@@ -98,7 +98,7 @@ style: search.css
 
     document.getElementById('SearchResults').innerHTML = ''
 
-    search(articles, ['title', 'language', 'tags'], e.target.value).map(
+    search(articles, ['title', 'tech', 'tags'], e.target.value).map(
       (result) => { return result.item.html }
     ).forEach((resultHTML) => {
       let resultElm = document.createElement('div')

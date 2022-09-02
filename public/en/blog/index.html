@@ -316,7 +316,7 @@
   let articles = [
     {
     title: "Starting from scratch (Portfolio Devlog #1)",
-    language: "javascript",
+    tech: "javascript",
     tags: [
       "blog",
       "portfolio",
@@ -352,7 +352,7 @@
           </div>`
     },{
     title: "Don't connect your Stackblitz project with GitHub",
-    language: "javascript",
+    tech: "javascript",
     tags: [
       "blog",
       "portfolio",
@@ -397,7 +397,7 @@
           </div>`
     },{
     title: "GitHub-inspired explore page (Portfolio Devlog #2)",
-    language: "javascript",
+    tech: "javascript",
     tags: [
       "blog",
       "portfolio",
@@ -436,7 +436,7 @@
           </div>`
     },{
     title: "Documentation-driven problem-solving (Portfolio Devlog #3)",
-    language: "javascript",
+    tech: "javascript",
     tags: [
       "blog",
       "portfolio",
@@ -478,7 +478,7 @@
           </div>`
     },{
     title: "Fetching GitHub data from 11ty (Portfolio Devlog #5)",
-    language: "javascript",
+    tech: "javascript",
     tags: [
       "blog",
       "portfolio",
@@ -525,7 +525,7 @@
 
     document.getElementById('SearchResults').innerHTML = ''
 
-    search(articles, ['title', 'language', 'tags'], e.target.value).map(
+    search(articles, ['title', 'tech', 'tags'], e.target.value).map(
       (result) => { return result.item.html }
     ).forEach((resultHTML) => {
       let resultElm = document.createElement('div')

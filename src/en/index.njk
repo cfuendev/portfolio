@@ -13,6 +13,9 @@ style: home.css
 </section>
 
 <section id="Body">
+
+	<h3>Things I'm good at</h3>
+
 	<div id="Tech">
 		{% for tech in [
 			{ name:'Lit',
@@ -29,10 +32,25 @@ style: home.css
 				link: 'https://www.solidjs.com/'},
 			{ name: 'AlpineJS',
 				pic: 'https://seeklogo.com/images/A/alpine-js-logo-21F4169EAB-seeklogo.com.png',
-				link: 'https://alpinejs.dev/'
+				link: 'https://alpinejs.dev/'},
+			{ name: 'Tailwind',
+				pic: 'https://iconape.com/wp-content/files/an/351546/png/tailwind-css-logo.png',
+				link: 'http://tailwindcss.com/'},
+			{ name: 'HTML5',
+				pic: 'https://juststickers.in/wp-content/uploads/2014/05/HTML5-Mark-Shape-Cut-300x300.png',
+				link: 'https://html.spec.whatwg.org/dev/'},
+			{ name: 'CSS',
+				pic: 'https://juststickers.in/wp-content/uploads/2014/05/CSS3-Mark-Shape-Cut.png',
+				link: 'https://www.w3.org/Style/CSS/'},
+			{ name: 'JavaScript',
+				pic : 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png',
+				link: 'https://www.javascript.com/'},
+			{ name: 'TypeScript',
+				pic: 'https://codingthesmartway.com/wp-content/uploads/2017/12/logo_typescript.png',
+				link: 'https://www.typescriptlang.org/'
 			}
 		] %}
-		<a href="{{tech.link}}" class="Tech">
+		<a href="{{tech.link}}" target="_blank" class="Tech">
 			<div>
 				<div>
 					<img src="{{tech.pic}}">
