@@ -15,8 +15,13 @@ CFUEN's Blog/Portfolio, built with balloons and possums.
 - [ ] Categorization based on projects
 	- [ ] UI-Wise
 	- [ ] Being actually usable ???
+- [ ] "Me" Section leads to an introductory blog "Learn more about me! -> [ARTICLE]"
+- [ ] "Me" Section leads to interactive CV "Want to hire me? -> [CURRICULUM]"
 - [ ] Lazy-loading-image web component for Tech Showcase (Lit)
-- [ ] Tech showcase leading to projects related to that technology
+- [ ] Tech showcase leading to projects related to that technology (Defaults to docs)
+- [ ] Everything in Homepage is displayed on a single parallax element (Lit)
+	<!--Which shouldn't be annoying like Apple's parallax videos-->
+- [ ] Momentum scroll
 
 **A11y and i18n**
 
@@ -26,6 +31,7 @@ CFUEN's Blog/Portfolio, built with balloons and possums.
 
 **UI**
 
+- [ ] My picture on the homepage is a gallery when you hover over it
 - [ ] Design System
 	- [ ] Buttons
 - [ ] Prettier Tech showcase

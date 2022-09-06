@@ -25,7 +25,7 @@ section#Hero > div {
 }
 
 section#Hero > div > h1.Logo {
-	text-indent: -5px;
+	text-indent: 5;
 	line-height: 40px;
 	padding: 0;
 	margin: 0;
@@ -94,4 +94,39 @@ section#Body > #Tech > .Tech > div > div {
 section#Body > #Tech > .Tech > div > div > img {
 	max-width: 100px;
 	max-height: 90px;
+}
+
+section#Body > #Me {
+	padding: 0 20% 30px 20%;
+}
+
+section#Body > #Me > .Container > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--base3);
+	padding: 20px;
+	border-radius: 25px;
+	max-width: 40%;
+	margin-top: 30px;
+}
+
+section#Body > #Me > div {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-top: 30px;
+	width: 100%;
+	justify-content: space-between;
+}
+
+section#Body > #Me > div > span {
+	background-color: var(--base3);
+	padding: 20px;
+	border-radius: 25px;
+	max-width: 40%;
+}
+
+section#Body > #Me > div > span {
+	font-size: 20px;
 }
