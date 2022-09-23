@@ -31,7 +31,7 @@ header#Nav > div {
   padding: 0.5rem 2rem 0.5rem 2rem;
   background-color: #373741;
   border-radius: 3px;
-  filter: drop-shadow(0 3px 2px rgb(0,0,0,0.1));
+  filter: drop-shadow(0 3px 0px rgb(0,0,0,0.1));
 }
 
 header#Nav > div > #Logo {
@@ -48,12 +48,18 @@ header#Nav > div > #Links {
 	color: white;
 }
 
-header#Nav > div > #Links a {
+header#Nav > div > #Links > a {
   display: flex;
   align-items: center;
   margin-right: 5%;
   text-decoration-line: none;
   color: inherit;
+  padding: 2px 5px 2px 6px;
+  border-radius: 3px;
+}
+
+header#Nav > div > #Links > a:hover {
+  background-color: #454350;
 }
 
 

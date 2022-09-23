@@ -68,10 +68,6 @@ section#Body > #Tech > .Tech {
 	color: white;
 }
 
-section#Body > #Tech > .Tech:hover {
-	opacity: 70%;
-}
-
 section#Body > #Tech > .Tech > div > span {
 	font-size: 20px;
 	display: flex;
@@ -87,8 +83,22 @@ section#Body > #Tech > .Tech > div > div {
 	align-items: center;
 	background-color: var(--base3);
 	padding: 20px;
+	margin-top: 20px;
 	border-radius: 25px;
 	min-height: 105px;
+	filter: drop-shadow(0px 20px 0px #41414d);
+	transform: translate(0px, -20px);
+	transition-property: transform, filter;
+  transition-duration: 150ms;
+	transition-timing-function: cubic-bezier(0.18,0.89,0.32,1.27);;
+}
+
+section#Body > #Tech > .Tech > div > div:hover {
+	filter: drop-shadow(0px 10px 0px #41414d);
+	transform: translate(0px, -10px);
+	transition-property: transform, filter;
+  transition-duration: 150ms;
+	transition-timing-function: cubic-bezier(0.18,0.89,0.32,1.27);;
 }
 
 section#Body > #Tech > .Tech > div > div > img {

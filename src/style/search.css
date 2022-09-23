@@ -9,10 +9,15 @@
 
 #SearchBar input {
 	outline: none;
+	border: 2px solid #373741;
 	border-radius: 4rem;
 	padding: .5rem 1.7rem .5rem 1.7rem;
 	width: 50%;
-	font-size: 1.5rem;
+	font-size: 22px;
+	font-family: 'Nunito', sans-serif;
+	background-color: #373741;
+	color: white;
+  filter: drop-shadow(0 5px 0px #252228);
 }
 
 #SearchResults {
@@ -64,12 +69,12 @@
 .Result .Tags a,
 .Project .Tags a {
   font-size: 0.6rem;
-  border: 1px solid var(--base3);
   padding: 0.3rem;
   border-radius: 4rem;
   margin-right: 0.3rem;
   text-decoration-line: none;
 	color: white;
+	background-color: var(--base2);
 }
 
 .Tags a.javascript {
@@ -88,10 +93,15 @@
 
 .Project {
 	border-radius: .4rem;
+	background-color: var(--base2);
+	font-family: 'Nunito', sans-serif;
+  filter: drop-shadow(0 10px 0px #252228);
+	margin-bottom: 20px;
 }
 
 .Project h4 {
 	margin: 0 0 0 0;
+	font-size: 22px;
 }
 
 .Project .Pic {
@@ -103,7 +113,11 @@
 }
 
 .Project .Details {
-	padding: .5rem;
+	padding: 1rem;
+}
+
+.Project > .Details > span > span > * {
+	padding-top: .5rem;
 }
 
 .Project .Details h4 {

@@ -2,11 +2,13 @@
   "name": "node-starter",
   "version": "0.0.0",
   "scripts": {
-    "dev": "eleventy --serve",
+    "dev": "eleventy --serve --incremental",
     "build": "eleventy"
   },
   "dependencies": {
-    "@11ty/eleventy": "^1.0.1",
+    "@11ty/eleventy": "^2.0.0-canary.4",
+    "@11ty/eleventy-plugin-vite": "^1.0.0",
+    "@lit-labs/eleventy-plugin-lit": "^0.2.3",
     "fuse.js": "^6.6.2"
   }
 }
