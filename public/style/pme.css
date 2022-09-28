@@ -10,6 +10,12 @@
 body {
   background-color: var(--base0);
   color: white;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+body > *:not(header) {
+  animation: bodyAppear 500ms ease-in-out;
 }
 
 header#Nav {
@@ -62,9 +68,8 @@ header#Nav > div > #Links > a:hover {
   background-color: #454350;
 }
 
-
-body {
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
+@keyframes bodyAppear {
+  from {
+    opacity: 0;
+  } to { }
 }
-
