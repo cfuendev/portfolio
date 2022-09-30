@@ -1,10 +1,34 @@
 ---
 layout: pme.njk
-style: search.css
+style: contact.css
 ---
 
-<div id="Body">
-  <section id="SearchBar">
-		Aún no se puede enviarme correos
-  </section>
-</div>
+<!--github logo https://github.com/logos
+linkedin logo https://brand.linkedin.com/content/brand/global/en_us/index/visual-identity/logo-->
+
+<script type="module" src="../../../../scripts/img-load.js"></script>
+
+<section id="Links">
+	{% for link in [
+		{ name:'Freelancer',
+			pic:'https://www.logolynx.com/images/logolynx/s_40/40e3b58cbcf652d7a48152bb01a853be.png',
+			link:'https://www.freelancer.com/u/cfuendev'},
+		{ name:'LinkedIn',
+			pic:'https://logospng.org/download/linkedin/logo-linkedin-icon-512.png',
+			link:'https://www.linkedin.com/in/cfuendesign/'},
+		{ name:'GitHub',
+			pic:'../../pics/gh-light.png',
+			link:'https://github.com/cfuendesign/'}
+	] %}
+	<a href="{{link.link}}" target="_blank" class="Link">
+		<div>
+			<div>
+				<img-fetch
+				width="90" height="100"
+				src="{{link.pic}}"/>
+			</div>
+			<span>{{link.name}}</span>
+		</div>
+	</a>
+	{% endfor %}
+</section>

@@ -30,11 +30,16 @@
     </nav>
   </div>
 </header>
-<script type="module" href="../../../../scripts/router.js" defer>
+<script type="module" src="../../../../scripts/navScroll.js"></script>
+<script type="module">
+  import flamethrower from 'https://esm.sh/v90/flamethrower-router'
+    flamethrower({ log: true });
 </script>
 <body class="vitae">
   
 <!-- https://www.freepik.com/search?author=13115374&authorSlug=upklyak&format=author&query=isometric -->
+
+<script type="module" src="../../../../scripts/img-load.js"></script>
 
 <section id="Hero">
 	<img src="https://i.imgur.com/FdAI9DF.jpg"/>
@@ -54,7 +59,9 @@
 		<a href="https://lit.dev/" target="_blank" class="Tech">
 			<div>
 				<div>
-					<img src="https://lit.dev/images/logo.svg#flame">
+					<img-fetch
+					width="90" height="100"
+					src="../pics/lit.png"/>
 				</div>
 				<span>Lit</span>
 			</div>
@@ -63,7 +70,9 @@
 		<a href="https://svelte.dev/" target="_blank" class="Tech">
 			<div>
 				<div>
-					<img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg">
+					<img-fetch
+					width="90" height="100"
+					src="https://raw.githubusercontent.com/sveltejs/svelte/29052aba7d0b78316d3a52aef1d7ddd54fe6ca84/site/static/images/svelte-android-chrome-512.png"/>
 				</div>
 				<span>Svelte</span>
 			</div>
@@ -72,7 +81,9 @@
 		<a href="https://reactjs.org/" target="_blank" class="Tech">
 			<div>
 				<div>
-					<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K">
+					<img-fetch
+					width="90" height="100"
+					src="https://cachecrew.com/blog/wp-content/uploads/2018/06/ReactJS-1473435732-1528516038100.png"/>
 				</div>
 				<span>React</span>
 			</div>
@@ -81,7 +92,9 @@
 		<a href="https://www.solidjs.com/" target="_blank" class="Tech">
 			<div>
 				<div>
-					<img src="https://www.solidjs.com/assets/logo.123b04bc.svg">
+					<img-fetch
+					width="90" height="100"
+					src="https://miro.medium.com/max/552/1*ZCX0nmtPR7nVRswl0oqwCw.png"/>
 				</div>
 				<span>SolidJS</span>
 			</div>
@@ -90,7 +103,9 @@
 		<a href="https://alpinejs.dev/" target="_blank" class="Tech">
 			<div>
 				<div>
-					<img src="https://seeklogo.com/images/A/alpine-js-logo-21F4169EAB-seeklogo.com.png">
+					<img-fetch
+					width="90" height="100"
+					src="https://seeklogo.com/images/A/alpine-js-logo-21F4169EAB-seeklogo.com.png"/>
 				</div>
 				<span>AlpineJS</span>
 			</div>
@@ -99,7 +114,9 @@
 		<a href="http://tailwindcss.com/" target="_blank" class="Tech">
 			<div>
 				<div>
-					<img src="https://iconape.com/wp-content/files/an/351546/png/tailwind-css-logo.png">
+					<img-fetch
+					width="90" height="100"
+					src="https://iconape.com/wp-content/files/an/351546/png/tailwind-css-logo.png"/>
 				</div>
 				<span>Tailwind</span>
 			</div>
@@ -108,7 +125,9 @@
 		<a href="https://html.spec.whatwg.org/dev/" target="_blank" class="Tech">
 			<div>
 				<div>
-					<img src="https://juststickers.in/wp-content/uploads/2014/05/HTML5-Mark-Shape-Cut-300x300.png">
+					<img-fetch
+					width="90" height="100"
+					src="https://juststickers.in/wp-content/uploads/2014/05/HTML5-Mark-Shape-Cut-300x300.png"/>
 				</div>
 				<span>HTML5</span>
 			</div>
@@ -117,7 +136,9 @@
 		<a href="https://www.w3.org/Style/CSS/" target="_blank" class="Tech">
 			<div>
 				<div>
-					<img src="https://juststickers.in/wp-content/uploads/2014/05/CSS3-Mark-Shape-Cut.png">
+					<img-fetch
+					width="90" height="100"
+					src="https://juststickers.in/wp-content/uploads/2014/05/CSS3-Mark-Shape-Cut.png"/>
 				</div>
 				<span>CSS</span>
 			</div>
@@ -126,7 +147,9 @@
 		<a href="https://www.javascript.com/" target="_blank" class="Tech">
 			<div>
 				<div>
-					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png">
+					<img-fetch
+					width="90" height="100"
+					src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png"/>
 				</div>
 				<span>JavaScript</span>
 			</div>
@@ -135,7 +158,9 @@
 		<a href="https://www.typescriptlang.org/" target="_blank" class="Tech">
 			<div>
 				<div>
-					<img src="https://codingthesmartway.com/wp-content/uploads/2017/12/logo_typescript.png">
+					<img-fetch
+					width="90" height="100"
+					src="https://codingthesmartway.com/wp-content/uploads/2017/12/logo_typescript.png"/>
 				</div>
 				<span>TypeScript</span>
 			</div>
@@ -164,10 +189,10 @@
 	</div>
 </section>
 
-<section>
-<a href="https://www.freepik.com/free-vector/pharmaceutical-research-isometric-landing-page_10412428.htm#query=isometric&position=12&from_view=author">Images on "About me" section by upklyak</a> on Freepik
-<a href="https://www.freepik.com/free-vector/banner-creative-agency_8924473.htm#query=isometric&position=35&from_view=author">Image by upklyak</a> on Freepik
-</section>
-
 </body>
 </html>
+
+<section>
+  <a href="https://www.freepik.com/free-vector/pharmaceutical-research-isometric-landing-page_10412428.htm#query=isometric&position=12&from_view=author">Images on "About me" section by upklyak</a> on Freepik
+  <a href="https://www.freepik.com/free-vector/banner-creative-agency_8924473.htm#query=isometric&position=35&from_view=author">Image by upklyak</a> on Freepik
+</section>

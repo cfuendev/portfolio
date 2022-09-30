@@ -5,6 +5,8 @@ style: home.css
 
 <!-- https://www.freepik.com/search?author=13115374&authorSlug=upklyak&format=author&query=isometric -->
 
+<script type="module" src="../../../../scripts/img-load.js"></script>
+
 <section id="Hero">
 	<img src="https://i.imgur.com/FdAI9DF.jpg"/>
 	<div>
@@ -21,16 +23,16 @@ style: home.css
 	<div id="Tech">
 		{% for tech in [
 			{ name:'Lit',
-				pic:'https://lit.dev/images/logo.svg#flame',
+				pic:'../pics/lit.png',
 				link:'https://lit.dev/'},
 			{ name:'Svelte',
-				pic:'https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg',
+				pic:'https://raw.githubusercontent.com/sveltejs/svelte/29052aba7d0b78316d3a52aef1d7ddd54fe6ca84/site/static/images/svelte-android-chrome-512.png',
 				link:'https://svelte.dev/'},
 			{ name:'React',
-				pic:'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K',
+				pic:'https://cachecrew.com/blog/wp-content/uploads/2018/06/ReactJS-1473435732-1528516038100.png',
 				link:'https://reactjs.org/'},
 			{ name:'SolidJS',
-				pic: 'https://www.solidjs.com/assets/logo.123b04bc.svg',
+				pic: 'https://miro.medium.com/max/552/1*ZCX0nmtPR7nVRswl0oqwCw.png',
 				link: 'https://www.solidjs.com/'},
 			{ name: 'AlpineJS',
 				pic: 'https://seeklogo.com/images/A/alpine-js-logo-21F4169EAB-seeklogo.com.png',
@@ -55,7 +57,9 @@ style: home.css
 		<a href="{{tech.link}}" target="_blank" class="Tech">
 			<div>
 				<div>
-					<img src="{{tech.pic}}">
+					<img-fetch
+					width="90" height="100"
+					src="{{tech.pic}}"/>
 				</div>
 				<span>{{tech.name}}</span>
 			</div>
@@ -82,9 +86,4 @@ style: home.css
 		</div>
 
 	</div>
-</section>
-
-<section>
-<a href="https://www.freepik.com/free-vector/pharmaceutical-research-isometric-landing-page_10412428.htm#query=isometric&position=12&from_view=author">Images on "About me" section by upklyak</a> on Freepik
-<a href="https://www.freepik.com/free-vector/banner-creative-agency_8924473.htm#query=isometric&position=35&from_view=author">Image by upklyak</a> on Freepik
 </section>

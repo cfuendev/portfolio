@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../../../style/pme.css">
-  <link rel="stylesheet" href="../../../../style/search.css">
+  <link rel="stylesheet" href="../../../../style/contact.css">
   <!--Layout for (P)retty (M)uch (E)verything -->
   <title></title>
 </head>
@@ -30,15 +30,59 @@
     </nav>
   </div>
 </header>
-<script type="module" href="../../../../scripts/router.js" defer>
+<script type="module" src="../../../../scripts/navScroll.js"></script>
+<script type="module">
+  import flamethrower from 'https://esm.sh/v90/flamethrower-router'
+    flamethrower({ log: true });
 </script>
 <body class="vitae">
   
-<div id="Body">
-  <section id="SearchBar">
-		Aún no se puede enviarme correos
-  </section>
-</div>
+<!--github logo https://github.com/logos
+linkedin logo https://brand.linkedin.com/content/brand/global/en_us/index/visual-identity/logo-->
+
+<script type="module" src="../../../../scripts/img-load.js"></script>
+
+<section id="Links">
+	
+	<a href="https://www.freelancer.com/u/cfuendev" target="_blank" class="Link">
+		<div>
+			<div>
+				<img-fetch
+				width="90" height="100"
+				src="https://www.logolynx.com/images/logolynx/s_40/40e3b58cbcf652d7a48152bb01a853be.png"/>
+			</div>
+			<span>Freelancer</span>
+		</div>
+	</a>
+	
+	<a href="https://www.linkedin.com/in/cfuendesign/" target="_blank" class="Link">
+		<div>
+			<div>
+				<img-fetch
+				width="90" height="100"
+				src="https://logospng.org/download/linkedin/logo-linkedin-icon-512.png"/>
+			</div>
+			<span>LinkedIn</span>
+		</div>
+	</a>
+	
+	<a href="https://github.com/cfuendesign/" target="_blank" class="Link">
+		<div>
+			<div>
+				<img-fetch
+				width="90" height="100"
+				src="../../pics/gh-light.png"/>
+			</div>
+			<span>GitHub</span>
+		</div>
+	</a>
+	
+</section>
 
 </body>
 </html>
+
+<section>
+  <a href="https://www.freepik.com/free-vector/pharmaceutical-research-isometric-landing-page_10412428.htm#query=isometric&position=12&from_view=author">Images on "About me" section by upklyak</a> on Freepik
+  <a href="https://www.freepik.com/free-vector/banner-creative-agency_8924473.htm#query=isometric&position=35&from_view=author">Image by upklyak</a> on Freepik
+</section>
