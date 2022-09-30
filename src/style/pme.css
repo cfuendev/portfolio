@@ -32,7 +32,7 @@ header#Nav {
 
 header#Nav.Scrolled {
   transition-property: padding;
-  transition: 300ms ease-out;
+  transition: 100ms ease-out;
   padding: 0 !important;
 }
 
