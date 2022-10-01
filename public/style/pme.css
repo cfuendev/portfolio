@@ -18,6 +18,10 @@ body > *:not(header) {
   animation: bodyAppear 500ms ease-in-out;
 }
 
+body.hide {
+  display: none !important;
+}
+
 header#Nav {
   margin-top: 10px;
   top: 0;
