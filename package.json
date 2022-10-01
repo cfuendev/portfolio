@@ -2,7 +2,7 @@
   "name": "node-starter",
   "version": "0.0.0",
   "scripts": {
-    "dev": "eleventy --serve --incremental",
+    "dev": "eleventy --serve",
     "build": "eleventy"
   },
   "dependencies": {
